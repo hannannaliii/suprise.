@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naura Birthday 🎂</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #e6e6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* LOGIN */
+.login-box {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    width: 80%;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background: #ff4d88;
+    color: white;
+    cursor: pointer;
+}
+
+/* MAIN PAGE */
+.container {
+    display: none;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.glass {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="music" loop>
+    <source src="d:\Downloads\IMG_6307.MP4" type="audio/mpeg">
+</audio>
+
+<!-- LOGIN -->
+<div class="login-box" id="loginBox">
+    <h2> Masukkan Password</h2>
+    <p>Hint: liat dibawah kotak ke 3.</p>
+    <input type="password" id="password" placeholder="Password...">
+    <br>
+    <button onclick="checkPassword()">Masuk</button>
+</div>
+
+<!-- MAIN -->
+<div class="container" id="main">
+
+    <h1>🎂 Nauraa Lithfi Ramadhani's Day 🎂</h1>
+
+    <div class="glass">
+        <p>
+        its ur special day, so i just wanna say happy birthday sayangg, may allah bless u with all the happiness in the world, and may all ur dreams come true. i hope this day is a special as u are, and i hope we can celebrate many more birthdays together. i love u so much, and i can't wait to see what the future holds for us. happy birthday manaaww
+
+        </p>
+    </div>
+
+    <div class="glass">
+        <h3>💌</h3>
+        <p>
+       makasii udaaa hadir di hidup aku, mungkin lagu ini yang bisa menggambarkan perasaan itu. semoga kamu juga ngerasa yang sama setelah ada kehadiran akuu. terkadang aku suka mikir "u deserve someone better" but i can't see u with another man, so lemme became better for u. my heart is yours, i love u.
+        </p>
+    </div>
+
+    <div class="glass">
+        <h3>📸 OURS MEMORIES</h3>
+        <div class="gallery">
+            <img src="d:\Downloads\WhatsApp Image 2026-07-06 at 00.01.50 (1).jpeg">
+            <img src="d:\Downloads\WhatsApp Image 2026-07-06 at 00.01.50 (2).jpeg">
+            <img src="d:\Downloads\WhatsApp Image 2026-07-06 at 00.01.50.jpeg">
+            <img src="d:\Downloads\WhatsApp Image 2026-07-06 at 21.21.33 (1).jpeg">
+            <img src="d:\Downloads\WhatsApp Image 2026-07-06 at 21.21.33.jpeg">
+            <img src="c:\Users\Faiz\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\D534B5B3698FDAC1768911D7E713E443BC3004EF\transfers\2026-27\IMG_5042.JPG.jpeg">
+        </div>
+    </div>
+
+    <button onclick="alert('May allah bless u with all the happiness around u 💖🎉')">
+        click 🎁
+    </button>
+
+</div>
+
+<script>
+function checkPassword() {
+    let pass = document.getElementById("password").value;
+
+    // PASSWORD SURPRISE (ubah sesuai mau kamu)
+    if(pass === "naura" || pass === "0507") {
+
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("main").style.display = "block";
+
+        let music = document.getElementById("music");
+        music.play();
+
+    } else {
+        alert("Password salah wleek 😝 coba lagi");
+    }
+}
+</script>
+
+</body>
+</html>
